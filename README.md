@@ -1,7 +1,7 @@
 # Robot Arm Lifting Capacity Calculator
 
 Simulation of the lifting capacity of a robot arm. 
-It calculates joint torques based on user-defined joint angles and payload, checks motor torque limits, and visualizes valid reach points for various payloads.
+It calculates joint torques based on user-defined joint angles and payload, checks motor torque limits, and visualizes valid reach points.
 
 ## Usage
 
