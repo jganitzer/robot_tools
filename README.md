@@ -7,7 +7,7 @@ It calculates joint torques based on user-defined joint angles and payload, chec
 
 Run the script from the command line, optionally specifying joint angles:
 ```bash
-python calc_robot_lifting_capacity.py [main_boom_angle] [second_boom_angle] [wrist_angle]
+python calc_robot_lifting_capacity.py [main_boom_angle] [second_boom_angle] [wrist_angle] --[payload]
 ```
 
 - `main_boom_angle`: Angle of the main boom in degrees to the horizontal axis (default: 110)
