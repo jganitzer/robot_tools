@@ -13,11 +13,12 @@ python calc_robot_lifting_capacity.py [main_boom_angle] [second_boom_angle] [wri
 - `main_boom_angle`: Angle of the main boom in degrees to the horizontal axis (default: 110)
 - `second_boom_angle`: Angle of the second boom in degrees to the main-boom axis (default: -75)
 - `wrist_angle`: Vertical angle of the wrist in degrees to the second-boom axis (default: -30)
+- `--payload`: Payload in kg (default: 0.0)
 
 ### Example
 
 ```bash
-python calc_robot_lifting_capacity.py 90 -45 -30
+python calc_robot_lifting_capacity.py 90 -45 -30 --payload 0.2
 ```
 
 This calculates the maximum payload and plots the reach area for the specified angles.

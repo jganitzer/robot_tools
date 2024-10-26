@@ -210,6 +210,7 @@ def calculate_max_payload(angles: list) -> float:
 
 if __name__ == "__main__":
     default_angles = [110, -75, -30, 0]
+    default_payload = 0.0 
 
     parser = argparse.ArgumentParser(description="Robot arm simulation")
     parser.add_argument(
@@ -233,6 +234,15 @@ if __name__ == "__main__":
         default=default_angles[2],
         help=f"Vertical angle of the wrist in degrees (default: {default_angles[2]})",
     )
+    
+    parser.add_argument(
+        "--payload",
+        type=float,
+        nargs="?", 
+        const=default_payload,
+        default=default_payload,  
+        help=f"Payload in kg (default: {default_payload})",
+    )
 
     args = parser.parse_args()
     angles = [args.main_boom_angle, args.second_boom_angle, args.wrist_angle, 0]
@@ -240,4 +250,4 @@ if __name__ == "__main__":
     print(f"Max Payload for angles {angles}: {payload:.2f} kg")
     print(f"Max Payload fully stretched: {calculate_max_payload([0, 0, 0, 0]):.2f} kg")
     print("Plotting...")
-    plot_robot_position_and_limits(angles, payload=0.2)
+    plot_robot_position_and_limits(angles, payload=args.payload)
