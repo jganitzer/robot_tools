@@ -7,7 +7,7 @@ It calculates joint torques based on user-defined joint angles and payload, chec
 
 Run the script from the command line, optionally specifying joint angles:
 ```bash
-python calc_robot_lifting_capacity.py [main_boom_angle] [second_boom_angle] [wrist_vertical_angle] [wrist_horizontal_angle]
+python calc_robot_lifting_capacity.py [main_boom_angle] [second_boom_angle] [wrist_angle]
 ```
 
 - `main_boom_angle`: Angle of the main boom in degrees to the horizontal axis (default: 110)
@@ -24,7 +24,6 @@ This calculates the maximum payload and plots the reach area for the specified a
 
 ## Example Output
 
-After running the script, it displays:
 - **Max Payload**: Maximum weight that can be lifted at the specified angles.
 - **Max Payload Fully Stretched**: Maximum weight that can be lifted when robot is full stretched.
 - **Reach Plot**: Visualization of the robot position and the valid reach points for the specified payload.
